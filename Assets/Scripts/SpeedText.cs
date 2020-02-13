@@ -15,7 +15,7 @@ public class SpeedText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentSpeed.text = GameObject.Find("Player").GetComponent<PlayerStatManager>().currentShoot.ToString();
+        currentSpeed.text = GameObject.Find("Player").GetComponent<PlayerStatManager>().currentSpeed.ToString();
 
     }
 }

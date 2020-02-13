@@ -6,25 +6,26 @@ using UnityEngine.SceneManagement;
 public class PlayerStatManager : MonoBehaviour
 {
     public float currentSpeed;
-    public float currentMP;
     public float currentShoot;
     public float currentDefense;
-    public float currentMagic;
     public float baseSpeed;
-    public float baseMP;
     public float baseShoot;
     public float baseDefense;
-    public float baseMagic;
+    public float currentDribble;
+    public float baseDribble;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().currentShoot = Stats_Managaer.instance.OverworldAttack;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().currentDefense = Stats_Managaer.instance.OverworldDefense;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().currentSpeed = Stats_Managaer.instance.OverworldMagic;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().baseShoot = Stats_Managaer.instance.BaseOverworldAttack;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().baseDefense = Stats_Managaer.instance.BaseOverworldDefense;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().baseSpeed = Stats_Managaer.instance.BaseOverworldMagic;
+
+        GameObject.Find("Player").GetComponent<PlayerStatManager>().currentShoot = Stats_Managaer.get.currentShoot;
+        GameObject.Find("Player").GetComponent<PlayerStatManager>().currentDefense = Stats_Managaer.get.currentDefense;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().currentSpeed = Stats_Managaer.get.currentSpeed;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().currentDribble = Stats_Managaer.get.currentDribble;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().baseShoot = Stats_Managaer.get.baseShoot;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().baseDefense = Stats_Managaer.get.baseDefense;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().baseSpeed = Stats_Managaer.get.baseSpeed;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().baseDribble = Stats_Managaer.get.baseDribble;
 
     }
 
