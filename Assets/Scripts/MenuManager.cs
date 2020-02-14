@@ -16,8 +16,7 @@ public class MenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            bool isActive = optionsMenu.activeSelf;
-            optionsMenu.SetActive(!isActive);
+            optionsMenu.gameObject.SetActive(!optionsMenu.gameObject.activeSelf);
 
 
         }
