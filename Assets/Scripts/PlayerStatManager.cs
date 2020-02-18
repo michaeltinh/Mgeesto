@@ -18,15 +18,7 @@ public class PlayerStatManager : MonoBehaviour
     void Start()
     {
 
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().currentShoot = Stats_Managaer.get.currentShoot;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().currentDefense = Stats_Managaer.get.currentDefense;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().currentSpeed = Stats_Managaer.get.currentSpeed;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().currentDribble = Stats_Managaer.get.currentDribble;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().baseShoot = Stats_Managaer.get.baseShoot;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().baseDefense = Stats_Managaer.get.baseDefense;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().baseSpeed = Stats_Managaer.get.baseSpeed;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().baseDribble = Stats_Managaer.get.baseDribble;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatManager>().money = Stats_Managaer.get.money;
+       
 
 
     }
@@ -34,6 +26,8 @@ public class PlayerStatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
+
+   
