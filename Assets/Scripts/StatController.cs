@@ -55,6 +55,14 @@ public class StatController : MonoBehaviour
             moneySystem.RemoveMoney(10);
         }
     }
+    public void jumpIncrease()
+    {
+        if (moneySystem.money >= 0.1f)
+        {
+            Player.GetComponent<PlayerStatManager>().currentJump++;
+            moneySystem.RemoveMoney(10);
+        }
+    }
     public void moneyIncrease()
     {
         moneySystem.AddMoney(10);

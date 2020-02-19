@@ -13,6 +13,8 @@ public class PlayerStatManager : MonoBehaviour
     public float baseDefense;
     public float currentDribble;
     public float baseDribble;
+    public float currentJump;
+    public float baseJump;
     // Start is called before the first frame update
     void Start()
     { 
