@@ -20,33 +20,7 @@ public class Stats_Managaer : MonoBehaviour
     {
         
     }
-    [SerializeField] public int money;
-
-    public void AddMoney(int amount)
-    {
-        money += amount;
-    }
-
-    public void RemoveMoney(int amount)
-    {
-        if (amount <= money)
-        {
-            money -= amount;
-        }
-        else
-        {
-            Debug.Log("Broke niba");
-        }
-
-    }
-    public bool RequestMoney(int amount)
-    {
-        if (amount <= money)
-        {
-            return true;
-        }
-        return false;
-    }
+ 
 
 
     //Save Data Betweeen Scenes

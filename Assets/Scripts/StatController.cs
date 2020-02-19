@@ -8,10 +8,13 @@ public class StatController : MonoBehaviour
 
     public float increase = 1f;
     PlayerStatManager statscript;
+    public GameObject Player;
+    MoneySystem moneySystem;
+
     // Start is called before the first frame update
     void Start()
     {
-       statscript = GetComponent<PlayerStatManager>();
+        moneySystem = FindObjectOfType<MoneySystem>();
     }
 
     // Update is called once per frame
@@ -22,7 +25,39 @@ public class StatController : MonoBehaviour
 
    public void ShootingIncrease()
     {
-        statscript.currentShoot++;
-        
+        if (moneySystem.money >= 0.1f)
+        {
+            Player.GetComponent<PlayerStatManager>().currentShoot++;
+            moneySystem.RemoveMoney(10);
+        }
     }
+    public void SpeedIncrease()
+    {
+        if (moneySystem.money >= 0.1f)
+        {
+            Player.GetComponent<PlayerStatManager>().currentSpeed++;
+            moneySystem.RemoveMoney(10);
+        }
+    }
+    public void DefenseIncrease()
+    {
+        if (moneySystem.money >= 0.1f)
+        {
+            Player.GetComponent<PlayerStatManager>().currentDefense++;
+            moneySystem.RemoveMoney(10);
+        }
+    }
+    public void handleIncrease()
+    {
+        if (moneySystem.money >= 0.1f)
+        {
+            Player.GetComponent<PlayerStatManager>().currentDribble++;
+            moneySystem.RemoveMoney(10);
+        }
+    }
+    public void moneyIncrease()
+    {
+        moneySystem.AddMoney(10);
+    }
+
 }

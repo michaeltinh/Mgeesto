@@ -15,6 +15,6 @@ public class Money : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoneyValue.text = GameObject.Find("Player").GetComponent<PlayerStatManager>().money.ToString();
+        MoneyValue.text = GameObject.Find("Player").GetComponent<MoneySystem>().money.ToString();
     }
 }
