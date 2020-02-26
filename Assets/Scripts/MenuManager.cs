@@ -19,14 +19,10 @@ public class MenuManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             MenuOpen = true;
-            
-        }
-
-        if (MenuOpen == true)
-        {
             optionsMenu.gameObject.SetActive(!optionsMenu.gameObject.activeSelf);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+
         }
 
         if (MenuOpen == false)
