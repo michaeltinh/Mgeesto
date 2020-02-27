@@ -25,12 +25,16 @@ public class MenuManager : MonoBehaviour
 
         }
 
-        if (MenuOpen == false)
+        if (!optionsMenu.activeInHierarchy)
         {
             MenuOpen = false;
-            Cursor.visible = false;
+        }
+
+        if (MenuOpen == false)
+        {
             Cursor.lockState = CursorLockMode.Locked;
-            Debug.Log("Hi");
+            Cursor.visible = false;
+            
 
         }
         
