@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class StatController : MonoBehaviour
 {
 
@@ -20,7 +20,7 @@ public class StatController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Player = GameObject.FindGameObjectWithTag("StatManager");
     }
 
    public void ShootingIncrease()
@@ -68,4 +68,16 @@ public class StatController : MonoBehaviour
         moneySystem.AddMoney(10);
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+    public void Scene1()
+    {
+        SceneManager.LoadScene("Scene1");
+    }
+    public void UpgradeScene()
+    {
+        SceneManager.LoadScene("UpgradeScene");
+    }
 }
