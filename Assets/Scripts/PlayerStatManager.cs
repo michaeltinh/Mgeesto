@@ -43,7 +43,7 @@ public class PlayerStatManager : MonoBehaviour {
         Defense = BaseDefense;
         Dribble = BaseDribble;
         Jump = BaseJump;
-        Money = 0;
+        Money = 100;
     }
 
     //Adds Money
